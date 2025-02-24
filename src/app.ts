@@ -15,7 +15,7 @@ dotenv.config()
 app.post('/chat/send', async (req, res) => {
   const {to, body} = req.body
   try {
-    await sendWhatsappMessage(to, body)
+    await sendWhatsappMessage(`whatsapp:${to}`, body)
     res.status(200).json({sucess: true, body})
   } catch(error) {
     res.status(500).json({sucess: false, error})

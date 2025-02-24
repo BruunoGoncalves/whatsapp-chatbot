@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && tsc"
+    "build": "npm install && tsc",
+    "dev": "npm run build && node build/app"
   },
   "keywords": [],
   "author": "",
