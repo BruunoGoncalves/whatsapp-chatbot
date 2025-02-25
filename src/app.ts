@@ -37,7 +37,7 @@ app.post('/chat/receive', async (req, res) => {
   } catch(error) {
     res.status(500).json({sucess: false, error})
   }  
-})
+});
 
 const port = process.env.PORT || 3000
 
