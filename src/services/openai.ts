@@ -14,10 +14,11 @@ export const getOpenAICompletion = async (input: string): Promise<string> => {
       messages: [{ role: "user", content: input }],
     });
 
+    console.log("Resposta da OpenAI:", completion); // <-- Log da resposta
+
     return completion.choices[0]?.message?.content ?? "Erro: resposta vazia";
   } catch (error) {
-    console.log(`Error completing input: ${error}`);
+    console.error("Erro na OpenAI:", error); // <-- Log do erro
     return "Erro ao processar a resposta";
   }
 };
-
